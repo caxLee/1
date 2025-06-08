@@ -27,7 +27,10 @@ jobs:
         env:
           SEATABLE_API_TOKEN: ${{ secrets.SEATABLE_API_TOKEN }}
           SEATABLE_SERVER_URL: ${{ vars.SEATABLE_SERVER_URL }}
+          PYTHONIOENCODING: utf-8    # 添加此行设置 Python 输出编码
+          PYTHONUTF8: 1              # 强制使用 UTF-8
         run: |
+          chcp 65001                 # 设置控制台代码页为 UTF-8
           python data/lkx-ths.py
           
       - name: Handle errors
