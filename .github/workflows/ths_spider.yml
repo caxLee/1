@@ -28,7 +28,7 @@ jobs:
           SEATABLE_API_TOKEN: ${{ secrets.SEATABLE_API_TOKEN }}
           SEATABLE_SERVER_URL: ${{ vars.SEATABLE_SERVER_URL }}
         run: |
-          python data/lkx-ths.py
+          python main.py
           
       - name: Handle errors
         if: failure()
