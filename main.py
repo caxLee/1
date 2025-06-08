@@ -7,12 +7,9 @@ from seatable_api import Base
 from datetime import datetime
 import os
 
-API_TOKEN = os.getenv('SEATABLE_API_TOKEN')
-SERVER_URL = os.getenv('SEATABLE_SERVER_URL')
-
-# SeaTable 配置
-API_TOKEN = "c05065aef9ec85d6ac0f4cce91e8a9d98b167dff"
-SERVER_URL = "https://cloud.seatable.cn"
+# 从环境变量获取配置，如果没有则使用默认值
+API_TOKEN = os.getenv('SEATABLE_API_TOKEN', "c05065aef9ec85d6ac0f4cce91e8a9d98b167dff")
+SERVER_URL = os.getenv('SEATABLE_SERVER_URL', "https://cloud.seatable.cn")
 TABLE_NAME = "龙虎榜"
 
 # 文件名
