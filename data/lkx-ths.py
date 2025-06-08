@@ -8,7 +8,7 @@ from datetime import datetime
 import os
 
 # 从环境变量获取配置，如果没有则使用默认值
-API_TOKEN = os.getenv('SEATABLE_API_TOKEN', "c05065aef9ec85d6ac0f4cce91e8a9d98b167dff")
+API_TOKEN = os.getenv('SEATABLE_API_TOKEN', "6c264ebbcd8ee911db00e4ca69afce6270bd4c72")
 SERVER_URL = os.getenv('SEATABLE_SERVER_URL', "https://cloud.seatable.cn")
 TABLE_NAME = "龙虎榜"
 
